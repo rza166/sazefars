@@ -36,6 +36,7 @@ class Employe extends FormRequest
            'email'=>'required|string',
            'comment'=>'nullable|string',
             'image'=>'nullable|string',
+          
         ];
     }
 }
