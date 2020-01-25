@@ -25,18 +25,18 @@ class Employe extends FormRequest
     {
         return [
           'id'=>'numeric',
+          'codemeli'=>'required|codemeli|unique:estekhdams,codemeli',
           'namefamil'=>'required|string',
-          'kodemeli'=>'required|numeric',
           'madrak'=>'required|string',
-           'reshte'=>'required|string',
+           'reshteh'=>'required|string',
            'univercity'=>'required|string',
-           'tavalod'=>'required|string',
-           'mobile'=>'required|numeric',
-            'tel'=>'required|numeric',
+           'tavalod'=>'required|tavalod',
+           'mobile'=>'required|mobile',
+            'tel'=>'required|tel',
            'email'=>'required|string',
            'comment'=>'nullable|string',
             'image'=>'nullable|string',
-          
+
         ];
     }
 }

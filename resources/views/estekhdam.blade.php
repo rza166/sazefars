@@ -4,17 +4,19 @@
 @endsection
 @section('content')
 
+  <div class="a" id="error">
+
+  </div>
 
      <form class="e4" id="reset">
-       <div class="" id="error">
 
-       </div>
        {{ csrf_field() }}
 
 
      <table align="center"  id="tblForm" cellpadding="0">
-       <tr>
-      <td><input type="text" id="name" name="fname" /></td>  <td>نام ونام خانوادگی</td>
+      <tr>
+
+      <td><input type="text" id="namefamil" name="namefamil" /></td>  <td>نام ونام خانوادگی</td>
        </tr>
        <tr>
          <td><input type="text" id="codemeli" /></td><td>کدملی</td>
@@ -46,6 +48,9 @@
        <tr>
          <td><textarea></textarea></td> <td>توضیحات</td>
        </tr>
+       <tr>
+         <td><input type="text" id="image" name="pass"/></td><td>عکس مدرک</td>
+       </tr>
 
 
 
@@ -55,11 +60,30 @@
        </tr> --}}
 
        <tr>
-      <td> <input type="reset" onclick="window.location='/'" value="بازگشت" /><button type="button" onclick="etebar()" class="btn btn-success a3"name="button"> ثبت</button> <input type="reset" value="حذف" /></td>
+      <td> <input type="reset"  onclick="window.location='/'" value="بازگشت" /><button type="button" onclick="etebar()" class="button1"> ثبت</button> <input type="reset" class="button" value="حذف" /></td>
+
        </tr>
          </table>
 
    </form>
+
+ </div>
+ <!-- The Modal -->
+ <div class="modal" id="editmodal">
+   <div class="modal-dialog">
+     <div class="modal-content">
+
+
+
+       <!-- Modal body -->
+       <div class="modal-body e1">
+       <span> تغییرات با موفقیت انجام شد </span>
+       </div>
+
+       <!-- Modal footer -->
+       <div class="modal-footer">
+         <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+       </div>
 
 
 @endsection

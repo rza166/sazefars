@@ -16,13 +16,13 @@ class CreateEstekhdamsTable extends Migration
         Schema::create('estekhdams', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('namefamil',40);
-          $table->string('kodemeli',10);
+          $table->string('codemeli',10)->unique();
           $table->string('madrak',20);
           $table->string('reshte',20);
           $table->string('univercity',30);
           $table->string('tavalod',8);
-          $table->string('mobile',10);
-          $table->string('tel',10);
+          $table->string('mobile',11);
+          $table->string('tel',11);
           $table->string('email',30);
           $table->string('comment',250);
           $table->string('image',100);

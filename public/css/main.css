@@ -186,13 +186,15 @@ nav li:hover .submenu{
 
 
 #tblForm{
-  margin:50px auto;
+  width: 40%;
+  margin:0 24%;
   border:1px solid #2098DF;
-  padding:20px 20px;
+  padding:0 20px;
   background: #c0c0c0;
   font-family: "tahoma";
   font-size: 11px;
   color: #02194b;
+  float: right;
 }
 
 #tblForm tr:hover{
@@ -207,4 +209,21 @@ nav li:hover .submenu{
 #tblForm td input{
   padding-left:5px;
   text-align: right;
+}
+
+.a{
+  width: 40%;
+  height: auto;
+  float: right;
+  margin:0 24%;
+  text-align: center;
+display: inline-block;
+}
+.button1{
+  background-color: rgb(4, 190, 0);
+  border: 1px solid rgb(57, 57, 57);
+}
+.button{
+  background-color: rgba(242, 59, 59, 0.94);
+
 }

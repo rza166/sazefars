@@ -30,7 +30,14 @@
       </li>
       <li>اخبار </li>
       <li>ارتباط با ما </li>
-      <li><a  class="a" href="/estekhdam">استخدام</a></li>
+      <li>
+        استخدام
+        <ul class="submenu">
+          <li><a  href="/estekhdam">فرم همکاری</a></li>
+
+          <li><a href="/search">ویرایش فرم</a></li>
+        </ul>
+      </li>
 
    </ul>
 </nav>
