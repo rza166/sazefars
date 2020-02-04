@@ -16,28 +16,28 @@
      <table align="center"  id="tblForm" cellpadding="0">
       <tr>
 
-      <td><input type="text" id="namefamil" name="namefamil" /></td>  <td>نام ونام خانوادگی</td>
+      <td><input type="text" id="namefamil" lang='fa' onblur="validate()" name="namefamil" /></td>  <td>نام ونام خانوادگی</td>
        </tr>
        <tr>
-         <td><input type="text" id="codemeli" /></td><td>کدملی</td>
+         <td><input type="text" onkeypress='validate(event)' id="codemeli" /></td><td>کدملی</td>
        </tr>
        <tr>
-         <td><input type="text" id="madrak" /></td><td>مدرک</td>
+         <td><input type="text" lang='fa' id="madrak" /></td><td>مدرک</td>
        </tr>
        <tr>
-        <td><input type="text" id="reshteh" name="pass"/></td> <td>رشته</td>
+        <td><input type="text" id="reshteh" lang='fa' name="pass"/></td> <td>رشته</td>
        </tr>
        <tr>
-         <td><input type="text" id="univercity" name="pass"/></td><td>دانشگاه محل تحصیل</td>
+         <td><input type="text" id="univercity" lang='fa' name="pass"/></td><td>دانشگاه محل تحصیل</td>
        </tr>
        <tr>
-         <td><input type="text" id="tavalod" name="pass"/></td><td>تاریخ تولد</td>
+         <td><input type="text" id="tavalod" onkeypress='validate(event)' placeholder="مثال:13601010"name="pass"/></td><td>تاریخ تولد</td>
        </tr>
        <tr>
-         <td><input type="text" id="mobile" name="pass"/></td><td>شماره همراه</td>
+         <td><input type="text" id="mobile" onkeypress='validate(event)' placeholder="همراه با صفر" name="pass"/></td><td>شماره همراه</td>
        </tr>
        <tr>
-        <td><input type="text" id="tel" name="pass"/></td> <td>تلفن</td>
+        <td><input type="text" id="tel" lang='fa' onkeypress='validate(event)' placeholder="همراه با کد شهر" name="pass"/></td> <td>تلفن</td>
        </tr>
        <tr>
          <td><input type="email" id="email" name="cpass" /></td><td>ایمیل</td>
@@ -48,9 +48,9 @@
        <tr>
          <td><textarea></textarea></td> <td>توضیحات</td>
        </tr>
-       <tr>
+       {{-- <tr>
          <td><input type="text" id="image" name="pass"/></td><td>عکس مدرک</td>
-       </tr>
+       </tr> --}}
 
 
 

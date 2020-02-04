@@ -60,7 +60,7 @@
        </tr> --}}
 
        <tr>
-      <td> <input type="reset" onclick="window.location='/'" value="بازگشت" /> <input type="reset" value="حذف" /></td>
+      <td> <input type="reset" onclick="window.location='/'" value="بازگشت" /> <button type="button" onclick="virayesh({{$karmand->id}})" class="button1"> ثبت</button></td>
       {{-- <button type="button"onclick="virayesh({{$karmand->id}})" class="btn btn-success a3"name="button"> ویرایش</button> --}}
        </tr>
          </table>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Estekhdam;
+use App\Models\Estekhdam;
 use App\Http\Requests\Employe;
 use App\Http\Requests\Virayesh;
 
@@ -59,7 +59,7 @@ class sazeController extends Controller
   }
   public function sabt(Request $request)
   {
-    $id=$request->id;
+   $id=$request->id;
    $karmand=Estekhdam::find($id);
   return view('sabt',compact('karmand'));
   }
@@ -76,7 +76,14 @@ class sazeController extends Controller
   public function searchmeli(Request $request)
   {
     $codemeli=$request->codemeli;
-    $codemeli=Estekhdam::where('codemeli','like',"%$codemeli%")->get();
-    return view('search', compact('codemeli'));
+    $codemeli2=Estekhdam::where('codemeli',$codemeli)->first();
+      if(!empty($codemeli2->id)){
+    return $codemeli2->id ;
+  }
+  else {
+    $error='کد ملی وجود نداشت';
+      return response()->json(['errors' => ['no_codmeli' => [$error]]],422);
+
   }
 }
+}//end class

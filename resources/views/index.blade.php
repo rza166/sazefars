@@ -56,16 +56,16 @@
   <!-- The slideshow -->
   <div class="carousel-inner image2">
     <div class="carousel-item active">
-      <img src="image\1.jpg" width="980" height="360" alt="">
+      <img src="image\1.jpg"  alt="">
     </div>
     <div class="carousel-item">
-      <img src="image\2.jpg" width="980" height="360" alt="">
+      <img src="image\2.jpg"   alt="">
     </div>
     <div class="carousel-item">
-      <img src="image\3.jpg"width="980" height="360" alt="">
+      <img src="image\3.jpg" alt="">
     </div>
     <div class="carousel-item">
-      <img src="image\4.jpg"width="980" height="360" alt="">
+      <img src="image\4.jpg" alt="">
     </div>
   </div>
 
