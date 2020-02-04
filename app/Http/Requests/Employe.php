@@ -33,7 +33,7 @@ class Employe extends FormRequest
            'tavalod'=>'required|tavalod',
            'mobile'=>'required|mobile',
             'tel'=>'required|tel',
-           'email'=>'required|string',
+           'email' => 'required|email',
            'comment'=>'nullable|string',
             'image'=>'nullable|string',
 

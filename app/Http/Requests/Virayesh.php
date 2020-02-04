@@ -27,7 +27,7 @@ class Virayesh extends FormRequest
       $id=Request::input('id');
       return [
             'id'=>'numeric',
-            'codemeli'=>'required|codemeli|unique:estekhdams,codemeli,' . $id,
+            'codemeli'=>'required|codemeli:estekhdams,codemeli,' . $id,
             'namefamil'=>'required|string',
             'madrak'=>'required|string',
              'reshteh'=>'required|string',
@@ -35,9 +35,9 @@ class Virayesh extends FormRequest
              'tavalod'=>'required|tavalod',
              'mobile'=>'required|mobile',
               'tel'=>'required|tel',
-             'email'=>'required|string',
+             'email' => 'required|email',
              'comment'=>'nullable|string',
-              'image'=>'nullable|string',
+             'image'=>'nullable|string',
 
         ];
     }

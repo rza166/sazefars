@@ -9,7 +9,7 @@
                 <tr>
                     <td align="center" colspan="2">
                       <br>
-                      <li><p align="right" style="font-size: 17px ;line-height:1.9em;text-align:justify;">شرکت سازه نگاران فارس فعالیت خودرا در سال 1392 شروع کرد </p></li>
+                      <li><p align="right" style="font-size: 17px ;line-height:1.9em;text-align:justify;">شرکت سازه نگاران فارس فعالیت خودرا در سال نیمه دوم 1391 شروع کرد </p></li>
                       <br>
                       <br>
                         <p align="center" style="font-weight: bold;font-size: 25px;text-indent:50px;text-decoration:blink">فعالیتهای شرکت سازه نگاران</p>
