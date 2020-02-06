@@ -27,3 +27,7 @@ Route::get('login','panelController@login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// login admin
+Route::get('/eimanLogin','Auth\AdminLoginController@showLoginForm')->name('eimanLogin');

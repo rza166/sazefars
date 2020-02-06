@@ -38,6 +38,10 @@
           <li><a href="/search">ویرایش فرم</a></li>
         </ul>
       </li>
+      {{-- <ul class="auth">
+        <li>ورود</li>
+        <li>ثبت نام</li>
+      </ul> --}}
 
    </ul>
 </nav>
