@@ -16,6 +16,7 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+
     ],
 
     /*
@@ -46,15 +47,13 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
+        'admin'  => [
+          'driver'  => 'session',
+          'provider' => 'admins',
         ],
-
         'admin-api' => [
             'driver' => 'token',
             'provider' => 'admins',
-            'hash' => false,
         ],
     ],
 
@@ -83,7 +82,7 @@ return [
 
         'admins' => [
             'driver' => 'eloquent',
-            'model' => App\models\Admin::class,
+            'model' => App\Models\Admin::class,
         ],
     ],
 
