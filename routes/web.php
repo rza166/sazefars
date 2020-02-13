@@ -31,3 +31,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // login admin
 Route::get('/eimanLogin','Auth\AdminLoginController@showLoginForm')->name('eimanLogin');
+Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+Route::get('/logout','Auth\AdminLoginController@logout')->name('admin.login');
