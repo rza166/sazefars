@@ -1,8 +1,8 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -17,9 +17,8 @@ class Admin extends Authenticatable
    */
   protected $guard = 'admin';
   protected $table = 'admins';
-  protected $fillable = [
-      'name', 'email', 'password',
-  ];
+
+  protected $fillable = ['name','username','mobaile','email',  'password','date_ad','date_up'];
   protected $hidden = [
       'password', 'remember_token',
   ];

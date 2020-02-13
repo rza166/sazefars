@@ -23,7 +23,8 @@ class CreateAdminsTable extends Migration
           $table->string('password');
           $table->rememberToken();
           $table->boolean('job');//سمت کاربر
-          $table->timestamps();
+          $table->integer('date_ad');
+          $table->integer('date_up');
           /*
             * سمت ها در قسمت مدیریت
             *مدیر کل 1
