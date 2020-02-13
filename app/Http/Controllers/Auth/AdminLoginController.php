@@ -18,32 +18,32 @@ class AdminLoginController extends Controller
   }
   public function login(Request $request)
   {
-      $this->validateLogin($request);
+    // Validate the form data
+    $this->validate($request, [
+      'username'   => 'required',
+      'password' => 'required|min:6'
+    ]);
 
-      // If the class is using the ThrottlesLogins trait, we can automatically throttle
-      // the login attempts for this application. We'll key this by the username and
-      // the IP address of the client making these requests into this application.
-      if (method_exists($this, 'hasTooManyLoginAttempts') &&
-          $this->hasTooManyLoginAttempts($request)) {
-          $this->fireLockoutEvent($request);
+    // Attempt to log the user in
+    if(preg_match('/^09[0-9]{9}$/', $request->username)){$fieldType='mobaile';$errorLog='موبایل یا رمز عبور اشتباه است .';}
+    // elseif(filter_var($request->username, FILTER_VALIDATE_EMAIL)){$fieldType='email';}
+    else{$fieldType='username';$errorLog='نام کاربری یا رمز عبور اشتباه است .';}
+    if (Auth::guard('admin')->attempt([$fieldType => $request->username, 'password' => $request->password], $request->remember)) {
+      // if successful, then redirect to their intended location
+      return redirect(route('shopProfile'));
 
-          return $this->sendLockoutResponse($request);
-      }
+    }
+    // if unsuccessful, then redirect back to the login with the form data
+    return redirect()->back()->withErrors(['username' => trans($errorLog)])->withInput($request->only('username', 'remember'));
 
-      if ($this->attemptLogin($request)) {
-          return $this->sendLoginResponse($request);
-      }
-
-      // If the login attempt was unsuccessful we will increment the number of attempts
-      // to login and redirect the user back to the login form. Of course, when this
-      // user surpasses their maximum number of attempts they will get locked out.
-      $this->incrementLoginAttempts($request);
-
-      return $this->sendFailedLoginResponse($request);
   }
-
-  protected function guard()
+  public function logout()
   {
-      return Auth::guard('admin');
+      Auth::guard('admin')->logout();
+      return redirect(route('eimanLogin'));
   }
+  // protected function guard()
+  // {
+  //     return Auth::guard('admin');
+  // }
 }//end class
