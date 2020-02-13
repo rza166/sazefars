@@ -8,6 +8,7 @@ use Auth;
 use Route;
 class AdminLoginController extends Controller
 {
+    //یک تغییر  فقط برای pull request
   public function __construct()
   {
     $this->middleware('guest:admin')->except('logout');
